@@ -1,0 +1,9 @@
+/var/log/apache2/*.log {
+   size 50M
+   compress
+   dateext
+   maxage 30
+   postrotate
+      /usr/bin/killall -HUP apache2
+   endscript
+}
